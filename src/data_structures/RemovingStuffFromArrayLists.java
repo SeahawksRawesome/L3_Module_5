@@ -3,8 +3,8 @@ package data_structures;
 import java.util.ArrayList;
 
 /**
- * Copyright The League of Amazing Programmers 2013-2017 Level 3 Two ArrayList
- * Cleaning Exercises Duration=.00 Platform=Eclipse Type=Recipe Objectives=
+ * Copyright The League of Amazing Programmers 2013-2018 Level 3 Two ArrayList
+ * Cleaning Exercises Duration=.00 Platform=Eclipse Type=Recipe Objectives=WOT?
  */
 
 public class RemovingStuffFromArrayLists {
@@ -26,7 +26,15 @@ public class RemovingStuffFromArrayLists {
 		stuffIFoundInTheYard.add(new Dirt());
 
 		System.out.println(stuffIFoundInTheYard.size());
-
+		for(int i = 0; i < stuffIFoundInTheYard.size();) {
+			Stuff SHOME = stuffIFoundInTheYard.get(i);
+			if(SHOME instanceof Dirt) {
+				stuffIFoundInTheYard.remove(SHOME);
+			}
+			else {
+				i++;
+			}
+		}
 		/* TODO 1: Clean out the dirt but keep the delicious worms. */
 
 		System.out.println(stuffIFoundInTheYard.size()); // should be 2
@@ -56,8 +64,37 @@ public class RemovingStuffFromArrayLists {
 		truth.add('#');
 		truth.add('u');
 		truth.add('t');
-
+		
 		/* TODO 2: Remove the hash symbols and print out the truth. */
-
+		System.out.println(truth.size());
+		for(int i = 0; i < truth.size();) {
+			Character SHOME = truth.get(i);
+			if(SHOME.equals('#')) {
+				truth.remove(SHOME);
+			}
+			else {
+				i++;
+			}
+		}
+		
+		System.out.println(truth.size());
+		for(int i = 0; i < truth.size();) {
+			Character SHOME = truth.get(i);
+			if(SHOME.equals('#')) {
+				truth.remove(SHOME);
+			}
+			else {
+				i++;
+			}
+			
+		}
+		String ooooffff = ""
+				+ "";
+		for(int i = 0; i < truth.size(); i++) {
+		ooooffff +=	truth.get(i);
+			ooooffff = ooooffff ;
+		}
+		System.out.println(ooooffff);
+		//System.out.println(truth);
 	}
 }
